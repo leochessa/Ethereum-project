@@ -1,18 +1,52 @@
-README
+# README #
 
-PROGETTO LOBINA-CHESSA
+Attraverso questo readme illustriamo i procedimenti di pulizia dei testi dei contratti estratti nel branch
+Web-Scraping-e-Parsing , la creazione del dizionario riassuntivo contenente i contratti e la successiva topic modelling
+che applicheremo.
 
-SMART CONTRACT WITH ETHERIUM
+### Obbiettivi ###
 
-L' obiettivo di questo progetto è quello di effettuare una topic modeling sui testi degli smart contract di ethereum in modo da comprendere in quali ambiti essi vengono utilizzati principalmente.
-I contratti in questione dovranno essere estratti dal sito Etherscan.io, ripuliti e poi utilizzati in due modelli di topic modeling, LDA (Latent Dirichlet Allocation) e NMF (Non-Negative Matrix Factorization).
+* Pulizia contratti
+* Creazione dizionario
+* Topic modelling
 
-L' ordine di esecuzione dei programmi è il seguente:
-Branch Web-scraping-e-Parsing: estrazione dei contratti dalla piattaforma Etherscan.io
-Branch stopwords-cleaning: pulizia dei testi dei contratti e Topic modeling
-Nella cartella Deposito_contratti del branch stopwords-cleaning saranno proposti tre file:
-contracts.csv (contiene circa 5000 contratti)
-cleaned_dataset_lemma.csv (pulizia + lemmatization di contracts.csv)
-cleaned_dataset_stem.csv (pulizia + stemming di contracts.csv)
+### Pulizia dei contratti ###
 
-Questi propongono i risultati dei file scraping.py e Topic_modeling.py
+* Installazione di tutte le librerie presenti su requirements.txt
+* Attraverso la programmazione ad oggetti creiamo diverse funzioni richiamabili
+* Apriamo il file contracts.csv, creato nel branch Web-Scraping-e-Parsing
+* Creiamo un set vuoto, per evitare doppioni, dove inseriremo i contratti puliti
+* Attraverso le Regex effettuiamo una prima pulizia del testo, quantomeno per la punteggiatura
+* Completiamo la pulizia attraverso un doppio ciclo for, grazie anche all'utilizzo di una lista
+
+### Creazione ?dizionario? ###
+
+* Il testo dei contratti puliti viene dapprima inserito nel set precedentemente creato
+* Attraverso un semplice ciclo for copiamo gli elementi del set in un dizionario per poi effettuare la topic modelling
+* E' stato creato anche un dataset a partire dal dizionario in modo da poterlo visualizzare meglio
+
+### Topic modelling ###
+
+* Repo owner or admin
+* Other community or team contact
+
+#########################################################
+
+## PROGETTO LOBINA-CHESSA ##
+
+### SMART CONTRACT WITH ETHERIUM ###
+*  SCRAPING DEI CONTRATTI
+*  STOPWORDS E PULIZIA DEI TESTI
+*  CREAZIONE DATASET
+*  TOPIC MODELLING
+*  DEDUZIONI E CONCLUSIONI
+*  PRESENTAZIONE
+
+# 
+
+Per ottenere il file csv (aggiornato) generato nel Branch Web-Scraping-e-Parsing
+è sufficiente scrivere nel terminale:
+
+"git checkout origin/Web-Scraping-e-Parsing Deposito_contratti"
+
+
